@@ -95,6 +95,10 @@ export class ArtifactComponent implements OnInit {
     return `[${g}/${a} "${v}"]`;
   }
 
+  clojureDepsEdnTemplate(g: string, a: string, v: string): string {
+    return `${g}/${a} {:mvn/version "${v}"}`;
+  }
+  
   gradleGrailsTemplate(g: string, a: string, v: string): string {
     return `compile '${g}:${a}:${v}'`;
   }
